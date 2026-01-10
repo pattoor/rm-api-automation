@@ -1,0 +1,13 @@
+# Entorno virtual 
+env/
+venv/
+ENV/
+
+# Python cache
+.__pycache__/
+
+# Pytest cache
+.pytest_cache/
+
+# Variables de entorno
+.env

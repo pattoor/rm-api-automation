@@ -1,0 +1,29 @@
+name: API Integrity Tests
+# on: [push, schedule] # Corre cada vez que subís código o por horario
+
+on:
+  push:
+    branches: [ main, develop ]
+    # ESTO ES LO IMPORTANTE:
+    paths-ignore: 
+      - 'README.md'
+      - '.gitignore'
+      - 'docs/**'
+      - '*.md' # Ignorar todos los archivos markdown
+  pull_request:
+    branches: [ main, develop ]
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Tests
+        run: python -m pytest
