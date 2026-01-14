@@ -15,12 +15,12 @@ The project follows the **Service Layer** design pattern to decouple connection 
 * **`models/`**: Data schema definitions using **Pydantic**. It acts as the "source of truth" for the data contract.
 * **`services/`**: A custom HTTP client built on the **Requests** library, designed for reusability and scalability.
 * **`tests/`**: Automated test suite powered by **Pytest**, utilizing parametrization to cover multiple scenarios with efficient, DRY code.
-* **.github/workflows/**: CI (Continuous Integration) pipeline configured for automated execution on GitHub's infrastructure.
+* **CI:** Optional GitHub Actions workflows can be added under `.github/workflows/` (not included in this repo).
 
 ## 🚀 Key Features
 -   **Contract Testing:** Automatic validation of data types, URL formats, and mandatory fields.
 -   **Negative Testing:** Handling and validation of error codes (404 Not Found, 400 Bad Request).
--   **CI/CD Ready:** Integrated with GitHub Actions for automated runs on every Push/PR (optimized to ignore documentation changes).
+ -   **CI/CD Ready:** Designed for CI automation (GitHub Actions config not included).
 -   **Professional Reporting:** Detailed execution logs and status reports.
 
 ## 🛠️ Installation & Execution

@@ -3,14 +3,14 @@ from typing import List, Optional
 
 # 1. Character model
 class Character(BaseModel):
-    id: int
+    # Use Field to ensure ID is always positive
+    id: int = Field(gt=0)
     name: str
     status: str
     species: str
     gender: str
     image: HttpUrl
-    # Use Field to ensure ID is always positive
-    id: int = Field(gt=0)
+    
 
 
 # 2. Location model
