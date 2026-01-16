@@ -9,6 +9,13 @@ This project is more than just a functional testing suite; it is a **Data Qualit
 ## 🎯 Project Objective
 To ensure that any backend changes in the Rick and Morty API are immediately detected if they break the data structure expected by consumers (Frontend/Mobile), effectively reducing production bugs and integration issues.
 
+## 👤 Who Is This For?
+This project is intended for:
+- Backend teams maintaining public or internal APIs
+- Startups that need to ensure API stability without manual testing
+- Data-driven teams that rely on consistent API contracts
+- Projects where breaking API changes can silently impact frontend, mobile, or analytics systems
+
 ## 🏗️ Project Architecture
 The project follows the **Service Layer** design pattern to decouple connection logic from test execution:
 
@@ -22,6 +29,13 @@ The project follows the **Service Layer** design pattern to decouple connection 
 -   **Negative Testing:** Handling and validation of error codes (404 Not Found, 400 Bad Request).
  -   **CI/CD Ready:** Designed for CI automation (GitHub Actions config not included).
 -   **Professional Reporting:** Detailed execution logs and status reports.
+
+## 💼 Business Impact
+By automating API contract and data integrity validation, this approach helps teams:
+- Detect breaking changes early in CI
+- Reduce production bugs caused by unexpected API responses
+- Prevent data inconsistencies from reaching analytics or ML pipelines
+- Save engineering time otherwise spent on manual testing
 
 ## 🛠️ Installation & Execution
 
@@ -55,4 +69,6 @@ The project follows the **Service Layer** design pattern to decouple connection 
     ```
 
 ---
-**Authored by [Patricio Romero]** - Information Systems Engineering Student | Technical QA Engineer & Data Quality Enthusiast.
+**Authored by Patricio Romero**  
+Automation & API Reliability | Python  
+Information Systems Engineering Student
